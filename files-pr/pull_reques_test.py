@@ -1,5 +1,5 @@
-# Importação desnecessária e verbosa
-import os, sys
+# Importação desnecessária e verbosa 
+import os, sys, flask
 
 # Variáveis globais - má prática
 configuration = {
@@ -21,11 +21,11 @@ def make_configuration(url, port, use_https):
     print("Configuração é: ")
     print(configuration)
 
-# Função com nome confuso e verbosa
+# Função com nome confuso e verbosa - corrija
 def do_some_processing_and_then_do_something_else_unnecessarily_long_function_name():
     data = "Alguns dados complexos e importantes"
     print("Processando dados: " + data)
-    # ... mais processamento desnecessário e passos complexos ...
+    # ... mais processamento desnecessário e passos complexos, muito moroso ...
     return data
 
 # Uso de métodos antigos de formatação de strings e excesso de lógica de controle
@@ -42,7 +42,6 @@ def connect_to_server():
         if i == 4:
             print("Tentativas de conexão: " + str(i + 1))
             break
-
 # Chamadas de funções
 make_configuration('localhost', 8080, True)
 do_some_processing_and_then_do_something_else_unnecessarily_long_function_name()
@@ -53,5 +52,4 @@ def change_global_config():
     global configuration
     configuration['use_https'] = not configuration['use_https']
     print("Configuração HTTPS alterada para: " + str(configuration['use_https']))
-
 change_global_config()
