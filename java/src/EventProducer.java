@@ -5,14 +5,13 @@ import java.util.concurrent.TimeUnit;
 
 class EventProducer implements Runnable {
     private final Publisher publisher;
-
     EventProducer(Publisher publisher) {
         this.publisher = publisher;
     }
 
     @Override
     public void run() {
-        String[] events = {"First Event", "Second Event", "Third Event"};
+        String[] events = {"Primeiro evento", "Second Event", "Third Event"};
         Random random = new Random();
 
         for (String event : events) {
@@ -24,5 +23,6 @@ class EventProducer implements Runnable {
                 System.out.println("Thread interrupted");
             }
         }
+        
     }
 }
